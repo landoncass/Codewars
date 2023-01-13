@@ -1,0 +1,28 @@
+using System.Linq;
+namespace Solution
+{
+    public static class ArraysInversion
+    {
+        public static int[] InvertValues(int[] input)
+        {
+            for (var i = 0; i < input.Length; i++)
+            {
+                if (input[i] < 0 || input[i] > 0)
+                {
+                    input[i] = -input[i];
+                }
+                else
+                {
+                    input[i] = 0;
+                }
+            }
+            return input;
+        }
+    }
+}
+
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+// invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+// invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+// invert([]) == []
